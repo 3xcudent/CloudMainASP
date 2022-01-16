@@ -173,6 +173,11 @@ img.cm-post-box-img {
         padding: 31px 15px 19px;
         border-radius: 2px;
     }
+.icon-blue {
+    color: #208af1 !important;
+    transform: rotateZ(90deg);
+    padding: 15px;
+}
 
         .menu-a:hover::after {
             content: "";
@@ -281,11 +286,6 @@ img.cm-post-box-img {
 
 }
 
-.icon-blue {
-    color: #208af1;
-    transform: rotateZ( 90deg );
-    padding: 15px;
-}
 
 .panel {
     transition: max-height 0.2s ease-out;
@@ -486,13 +486,17 @@ a.cm-error-buton {
 
 
 
-
+.loginform-user-img {
+    width: 100%;
+    max-width: 117px;
+    margin-bottom: 40px;
+}
 #cm-reg-main {
     left: 0;
     top: 0;
     width: 100%;
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
@@ -613,7 +617,7 @@ img.cm-reg-img {
 }
 
 .cm-form-login {
-    background: #23c186;
+    background: #2196f3;
     transition: 1s;
 }
 

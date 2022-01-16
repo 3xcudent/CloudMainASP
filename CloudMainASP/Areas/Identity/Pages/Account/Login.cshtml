@@ -7,58 +7,34 @@
 }
 
 
-            <div id="cm-login-main">
-                <div class="cm-login-main-content">
-                    <form id="cm-login-form" asp-route-returnUrl="@Model.ReturnUrl" method="post">
-                        <div class="cm-login-form-one">
-                            <div class="cm-form-icon">
-                                <i class="far fa-user cm-form-icon-class"></i>
-                                <input class="cm-login-form-class" asp-for="Input.Username" placeholder="Username" type="text">
-                            </div>
-                            <div class="cm-form-icon">
-                                <i class="fas  fa-key cm-form-icon-class"></i>
-                                <input class="cm-login-form-class" asp-for="Input.Password" placeholder="Hasło" type="Password">
-                            </div>
-                        </div>
-                        <div class="cm-form-box">
-                            <input class="cm-form-box-class" asp-for="Input.RememberMe" type="checkbox"> Zapamiętaj hasło
-                        </div>
-                        <input class="cm-form-button cm-form-login" type="submit" value="Zaloguj się">
-                        <a asp-route-returnUrl="@Model.ReturnUrl"><input class="cm-form-button cm-form-password" type="button" value="Zarejestruj się"></a>
-                        <p>
-                            <a id="cm-form-a" asp-page="./ResendEmailConfirmation">Zapomniałeś Hasło?</a>
-                        </p>
-                    </form>
+
+<div id="cm-login-main">
+    <div class="cm-login-main-content">
+        <form id="cm-login-form" method="post">
+            <div class="cm-login-form-one">
+                <img class="loginform-user-img" src="~/img/profile.png" />
+                <div class="cm-form-icon">
+                    <i class="far fa-user cm-form-icon-class"></i>
+                    <input class="cm-login-form-class" asp-for="Input.Username" placeholder="Adres email" type="text">
+                </div>
+                <div class="cm-form-icon">
+                    <i class="fas  fa-key cm-form-icon-class"></i>
+                    <input class="cm-login-form-class" asp-for="Input.Password" placeholder="Hasło" type="Password">
                 </div>
             </div>
-            @*
-            @{
-                if ((Model.ExternalLogins?.Count ?? 0) == 0)
-                {
-                    <div>
-                        <p>
-                            There are no external authentication services configured. See <a href="https://go.microsoft.com/fwlink/?LinkID=532715">this article</a>
-                            for details on setting up this ASP.NET application to support logging in via external services.
-                        </p>
-                    </div>
-                }
-                else
-                {
-                    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
-                        <div>
-                            <p>
-                                @foreach (var provider in Model.ExternalLogins)
-                                {
-                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
-                                }
-                            </p>
-                        </div>
-                    </form>
-                }
-            }
-        </section>
+            <div class="cm-form-box">
+                <input class="cm-form-box-class" asp-for="Input.RememberMe" type="checkbox"> Zapamiętaj hasło
+            </div>
+            <input class="cm-form-button cm-form-login" type="submit" value="Zaloguj się">
+            <a asp-page="./Register"><input class="cm-form-button cm-form-password" type="button" value="Zarejestruj się"></a>
+            <p>
+                <a id="cm-form-a" asp-page="./ResendEmailConfirmation">Zapomniałeś Hasło?</a>
+            </p>
+        </form>
     </div>
-</div>*@
+</div>
+
+
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
