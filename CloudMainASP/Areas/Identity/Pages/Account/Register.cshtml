@@ -5,36 +5,36 @@
     ViewData["Title"] = "Register";
 }
 
-<h1>@ViewData["Title"]</h1>
 
-<div class="row">
-    <div class="col-md-4">
-        <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
-            <h4>Create a new account.</h4>
-            <hr />
-            <div asp-validation-summary="All" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Input.Email"></label>
-                <input asp-for="Input.Email" class="form-control" />
-                <span asp-validation-for="Input.Email" class="text-danger"></span>
+<div id="cm-reg-main">
+
+    <div class="cm-reg-main-content">
+        <form class="cm-reg-form" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+
+
+
+            <span class="cm-reg-form-span">Zarejestruj się by skorzystać z naszej aplikacji</span>
+            <input class="cm-reg-form-class" asp-for="Input.Username" type="text" placeholder="Nazwa użytkownika">
+            <input class="cm-reg-form-class" asp-for="Input.Name" type="text" placeholder="Imię">
+            <input class="cm-reg-form-class" asp-for="Input.Surname" type="text" placeholder="Nazwisko">
+            <input class="cm-reg-form-class" asp-for="Input.Password" type="password" placeholder="Hasło">
+            <input class="cm-reg-form-class" asp-for="Input.ConfirmPassword" type="password" placeholder="Powtórz hasło">
+            <input class="cm-reg-form-class" asp-for="Input.Email" type="email" placeholder="Email">
+            <input class="cm-reg-form-class" asp-for="Input.BirthDate" type="date" placeholder="Data urodzenia">
+            <input class="cm-reg-form-class" asp-for="Input.Phone" type="text" placeholder="Nr telefonu">
+            <input class="cm-reg-form-class" asp-for="Input.PostCode" type="text" placeholder="Kod poctowy">
+            <input class="cm-reg-form-class" asp-for="Input.City" type="text" placeholder="Miejscowość">
+            <input class="cm-reg-form-class" asp-for="Input.Street" type="text" placeholder="Ulica">
+            <input class="cm-reg-form-class" asp-for="Input.HouseNumber" type="text" placeholder="Nr Domu/Mieszkania">
+            <div class="cm-reg-form-box">
+                <input class="cm-reg-form-box-class" type="checkbox"><span class="span-box"> Oświadczam, że zapoznałem się z  <a class="cm-reg-regulamin" href="regulamin.php"> Regulaminem</a> , akceptuję jego treść i zobowiązuję się przestrzegać jego postanowień.</span>
             </div>
-            <div class="form-group">
-                <label asp-for="Input.Password"></label>
-                <input asp-for="Input.Password" class="form-control" />
-                <span asp-validation-for="Input.Password" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Input.ConfirmPassword"></label>
-                <input asp-for="Input.ConfirmPassword" class="form-control" />
-                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
-            </div>
-            <button type="submit" class="btn btn-primary">Register</button>
+            <input class="cm-reg-form-class-submit" type="submit" value="Zarejestruj się">
+            <a asp-action="signin"><input class="cm-reg-form-class-back" type="button" value="Wróć do logowania"></a>
         </form>
     </div>
-    <div class="col-md-6 col-md-offset-2">
-        <section>
-            <h4>Use another service to register.</h4>
-            <hr />
+</div>
+
             @{
                 if ((Model.ExternalLogins?.Count ?? 0) == 0)
                 {

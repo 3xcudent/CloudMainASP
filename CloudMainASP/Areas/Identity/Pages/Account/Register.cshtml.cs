@@ -61,6 +61,45 @@ namespace CloudMainASP.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
+
+
+            [Required]
+            [Display(Name = "Username")]
+            public string Username { get; set; }
+
+            [Required]
+            [Display(Name = "Name")]
+            public string Name { get; set; }
+
+            [Required]
+            [Display(Name = "Surname")]
+            public string Surname { get; set; }
+
+            [Required]
+            [Display(Name = "BirthDate")]
+            [DataType(DataType.Date)]
+            [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+            public DateTime BirthDate { get; set; }
+
+            [Required]
+            [Display(Name = "Phone")]
+            public string Phone { get; set; }
+
+            [Required]
+            [Display(Name = "PostCode")]
+            public string PostCode { get; set; }
+
+            [Required]
+            [Display(Name = "City")]
+            public string City { get; set; }
+
+            [Required]
+            [Display(Name = "Street")]
+            public string Street { get; set; }
+
+            [Required]
+            [Display(Name = "HouseNumber")]
+            public string HouseNumber { get; set; }
         }
 
         public async Task OnGetAsync(string returnUrl = null)
@@ -75,7 +114,7 @@ namespace CloudMainASP.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = Input.Email, Email = Input.Email };
+                var user = new ApplicationUser { Name = Input.Name, Surname = Input.Surname, Email = Input.Email, HouseNumber = Input.HouseNumber, Street = Input.Street, City = Input.City, PostCode = Input.PostCode, UserName = Input.Username, BirthDate = Input.BirthDate, PasswordHash = Input.Password };
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {
