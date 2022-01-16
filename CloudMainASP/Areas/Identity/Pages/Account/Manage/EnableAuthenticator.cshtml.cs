@@ -11,19 +11,20 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using CloudMainASP.Models;
 
 namespace CloudMainASP.Areas.Identity.Pages.Account.Manage
 {
     public class EnableAuthenticatorModel : PageModel
     {
-        private readonly UserManager<CloudMainASPUser> _userManager;
+        private readonly UserManager<ApplicationUser> _userManager;
         private readonly ILogger<EnableAuthenticatorModel> _logger;
         private readonly UrlEncoder _urlEncoder;
 
         private const string AuthenticatorUriFormat = "otpauth://totp/{0}:{1}?secret={2}&issuer={0}&digits=6";
 
         public EnableAuthenticatorModel(
-            UserManager<CloudMainASPUser> userManager,
+            UserManager<ApplicationUser> userManager,
             ILogger<EnableAuthenticatorModel> logger,
             UrlEncoder urlEncoder)
         {
@@ -112,7 +113,7 @@ namespace CloudMainASP.Areas.Identity.Pages.Account.Manage
             }
         }
 
-        private async Task LoadSharedKeyAndQrCodeUriAsync(CloudMainASPUser user)
+        private async Task LoadSharedKeyAndQrCodeUriAsync(ApplicationUser user)
         {
             // Load the authenticator key & QR code URI to display on the form
             var unformattedKey = await _userManager.GetAuthenticatorKeyAsync(user);

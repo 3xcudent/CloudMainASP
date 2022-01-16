@@ -5,6 +5,7 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using CloudMainASP.Areas.Identity.Data;
+using CloudMainASP.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -14,11 +15,11 @@ namespace CloudMainASP.Areas.Identity.Pages.Account.Manage
 {
     public class DownloadPersonalDataModel : PageModel
     {
-        private readonly UserManager<CloudMainASPUser> _userManager;
+        private readonly UserManager<ApplicationUser> _userManager;
         private readonly ILogger<DownloadPersonalDataModel> _logger;
 
         public DownloadPersonalDataModel(
-            UserManager<CloudMainASPUser> userManager,
+            UserManager<ApplicationUser> userManager,
             ILogger<DownloadPersonalDataModel> logger)
         {
             _userManager = userManager;

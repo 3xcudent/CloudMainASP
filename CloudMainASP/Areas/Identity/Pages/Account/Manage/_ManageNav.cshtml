@@ -1,4 +1,7 @@
-﻿@inject SignInManager<CloudMainASPUser> SignInManager
+﻿@using CloudMainASP.Areas.Identity.Pages.Account.Manage
+@using CloudMainASP.Models
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
 @{
     var hasExternalLogins = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();
 }
