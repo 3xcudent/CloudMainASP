@@ -81,12 +81,38 @@ a {
     color: #208af1;
     transition: 1s;
 }
-
+.logout-icon {
+    font-size: 15px;
+    color: #394954;
+    transition: 1s;
+}
+    .logout-icon:hover {
+        font-size: 15px;
+        color: #208af1;
+    }
+#logout {
+    background: none;
+    border: none;
+}
+.logout-button {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
 span.succes-name {
     padding: 0 10px;
-    font-size: 14px;
+    font-size:12px;
 }
-
+.succes-avatar {
+    width: 100%;
+    max-width: 30px;
+    height: auto;
+}
+.sucess-avatar-img {
+    width: inherit;
+    height: inherit;
+    display: block;
+}
 .nav-suces-log {
     align-items: center;
     display: flex;
