@@ -30,35 +30,12 @@
                 <input class="cm-reg-form-box-class" type="checkbox"><span class="span-box"> Oświadczam, że zapoznałem się z  <a class="cm-reg-regulamin" href="regulamin.php"> Regulaminem</a> , akceptuję jego treść i zobowiązuję się przestrzegać jego postanowień.</span>
             </div>
             <input class="cm-reg-form-class-submit" type="submit" value="Zarejestruj się">
-            <a asp-action="signin"><input class="cm-reg-form-class-back" type="button" value="Wróć do logowania"></a>
+            <a asp-page="./login"><input class="cm-reg-form-class-back" type="button" value="Wróć do logowania"></a>
         </form>
     </div>
 </div>
 
-            @{
-                if ((Model.ExternalLogins?.Count ?? 0) == 0)
-                {
-                    <div>
-                        <p>
-                            There are no external authentication services configured. See <a href="https://go.microsoft.com/fwlink/?LinkID=532715">this article</a>
-                            for details on setting up this ASP.NET application to support logging in via external services.
-                        </p>
-                    </div>
-                }
-                else
-                {
-                    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form-horizontal">
-                        <div>
-                            <p>
-                                @foreach (var provider in Model.ExternalLogins)
-                                {
-                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
-                                }
-                            </p>
-                        </div>
-                    </form>
-                }
-            }
+          
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }

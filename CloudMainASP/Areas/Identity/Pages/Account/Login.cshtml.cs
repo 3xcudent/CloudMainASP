@@ -73,7 +73,7 @@ namespace CloudMainASP.Areas.Identity.Pages.Account
             ReturnUrl = returnUrl;
         }
 
-        public async Task<IActionResult> OnPostAsync(string returnUrl = "/IndexZ")
+        public async Task<IActionResult> OnPostAsync(string returnUrl = "/Index")
         {
             returnUrl ??= Url.Content("~/");
 
