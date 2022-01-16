@@ -1,8 +1,230 @@
-﻿@{
-    ViewData["Title"] = "Strona Główna";
-}
+﻿@{ ViewData["Title"] = "Strona Główna"; }
 
 <div class="body-post">
+    <div class="cm-search-content">
+        <form>
+            <div class="find-content flex">
+                <span class="find-text">
+                    Wyszukaj swoją przyszłą inwestycje
+                </span>
+                <input class="find-content-button statform" type="text" />
+            </div>
+            <div class="find-content-two flex">
+                <div class="find-content-h-main flex">
+                    <span class="find-content-h">
+                        Czego szukasz?
+                    </span>
+                    <select class="statform">
+                        <option>Mieszkanie</option>
+                    </select>
+                </div>
+                <div class="find-content-h-main flex">
+                    <span class="find-content-h">
+                        Rodzaj
+                    </span>
+                    <select class="statform">
+                        <option>Na sprzedaż</option>
+                    </select>
+                </div>
+                <div class="find-content-h-main flex">
+                    <span class="find-content-h">
+                        Liczba pokoi
+                    </span>
+                    <input class="statform nmpok" type="number" value="1" />
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+            <div class="find-content-two flex">
+
+
+
+
+
+
+
+
+
+
+                <div class="cm-find-wrapper iw flex">
+                    <span class="find-content-h">
+                        Cena
+                    </span>
+                    <div class="cm-find-price-input ia flex">
+                        <div class="cm-find-field flex">
+                            <span class="cm-find-span">od</span>
+                            <input type="number" class="input-min statform ic" value="2500">
+
+                        </div>
+
+                        <div class="cm-find-field flex">
+                            <span class="cm-find-span">do</span>
+                            <input type="number" class="input-max statform ic" value="7500">
+
+                        </div>
+                    </div>
+                    <div class="cm-find-slider ie">
+                        <div class="cm-find-progress ie"></div>
+                    </div>
+                    <div class="cm-find-range-input if flex">
+                        <input type="range" class="range-min ir" min="0" max="10000" value="2500" step="100">
+                        <input type="range" class="range-max ir" min="0" max="10000" value="7500" step="100">
+                    </div>
+                </div>
+
+                <div class="cm-find-wrapper-two iw flex">
+                    <span class="find-content-h">
+                        Powierzchnia
+                    </span>
+                    <div class="cm-find-price-input-two ia flex">
+                        <div class="cm-find-field-two flex">
+                            <span class="cm-find-span-two">Od</span>
+                            <input type="number" class="input-min-two statform ic" value="20">
+                            <span class="cm-find-span-two"> m2 </span>
+                        </div>
+
+                        <div class="cm-find-field-two  flex">
+                            <span class="cm-find-span-two"> do </span>
+                            <input type="number" class="input-max-two statform ic" value="9999">
+                            <span class="cm-find-span-two"> m2 </span>
+                        </div>
+                    </div>
+                    <div class="cm-find-slider-two ie">
+                        <div class="cm-find-progress-two ie"></div>
+                    </div>
+                    <div class="cm-find-range-input-two if flex">
+                        <input type="range" class="range-min-two ir" min="0" max="9999" value="20" step="100">
+                        <input type="range" class="range-max-two ir" min="0" max="9999" value="8000" step="100">
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+            <div class="cm-find-more flex">
+                <span class="cm-find-more-span accordion">
+                    <i class="fas fa-sliders-h icon-blue"></i>  Więcej filtrów <i class="fas fa-chevron-down icon-blues"></i>
+                </span>
+                <div class="cm-find-more-hide panel flex">
+                    <div class="cm-find-more-hide-one flex">
+                        <span class="cm-find-more-spans">
+                            Cena za m2
+                        </span>
+                        <div class="cm-find-more-hide-ones">
+                            od <input class="cm-find-input-number" type="number" /> zł/m2 do <input class="cm-find-input-number" type="number" />
+                        </div>
+                    </div>
+                    <div class="cm-find-mores-hide flex">
+                        <div class="cm-find-mores-box flex">
+                            <div class="cm-find-mores flex">
+                                <span class="cm-find-more-spans">
+                                    Rodzaj zabudowy
+                                </span>
+                                <input class="statform" type="text" />
+                            </div>
+                            <div class="cm-find-mores flex">
+                                <span class="cm-find-more-spans">
+                                    Piętro
+                                </span>
+                                <input class="statform" type="number" />
+                            </div>
+                            <div class="cm-find-mores flex">
+                                <span class="cm-find-more-spans">
+                                    Numer Oferty
+                                </span>
+                                <input class="statform" type="text" />
+                            </div>
+                        </div>
+                        <div class="cm-find-add flex">
+                            <span class="cm-find-more-spans">Dodatkowe opcje </span>
+                            <div class="cm-find-lokar">
+                                <div class="cm-find-add-columns flex">
+                                    <div class="cm-find-columns-down">
+                                        <input name="balkon" type="checkbox" />
+                                        <label for="balkon"> balkon</label><br>
+                                    </div>
+                                    <div class="cm-find-columns-down">
+                                        <input name="pomieszczenie" type="checkbox" />
+                                        <label for="pomieszczenie"> pom. użytkowe</label><br>
+                                    </div>
+                                    <div class="cm-find-columns-down">
+                                        <input name="garaz" type="checkbox" />
+                                        <label for="garaz"> garaż/miejsce parkingowe</label><br>
+                                    </div>
+                                    <div class="cm-find-columns-down">
+                                        <input name="piwinica" type="checkbox" />
+                                        <label for="piwnica"> piwnica</label><br>
+                                    </div>
+                                    <div class="cm-find-columns-down">
+                                        <input name="ogrodek" type="checkbox" />
+                                        <label for="ogrodek"> ogredek</label><br>
+                                    </div>
+                                </div>
+                                <div class="cm-find-add-columns flex">
+                                    <div class="cm-find-columns-down">
+                                        <input name="taras" type="checkbox" />
+                                        <label for="taras"> taras</label><br>
+                                    </div>
+                                    <div class="cm-find-columns-down">
+                                        <input name="winda" type="checkbox" />
+                                        <label for="winda"> winda</label><br>
+                                    </div>
+                                    <div class="cm-find-columns-down">
+                                        <input name="dwupoziomowe" type="checkbox" />
+                                        <label for="dwupoziomowe"> dwupoziomowe</label><br>
+                                    </div>
+                                    <div class="cm-find-columns-down">
+                                        <input name="kuchnia" type="checkbox" />
+                                        <label for="kuchnia"> oddzielna kuchnia</label><br>
+                                    </div>
+                                    <div class="cm-find-columns-down">
+                                        <input name="klimatyzacja" type="checkbox" />
+                                        <label for="klimatyzacja"> klimatyzacja</label><br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" class="submit-filter" value="SZUKAJ" />
+            </div>
+
+
+
+        </form>
+        <script>var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                });
+            }</script>
+    </div>
     <div class="body-post-premium flex">
         <h4 class="h2-promo">Promowane ogłoszenia</h4>
         <div class="post-premium-m flex">
@@ -161,218 +383,8 @@
             </div>
         </div>
     </div>
-    <div class="cm-search-content">
-        <form>
-            <div class="find-content flex">
-                <span class="find-text">
-                    Wyszukaj swoją przyszłą inwestycje
-                </span>
-                <input class="find-content-button statform" type="text" />
-            </div>
-            <div class="find-content-two flex">
-                <div class="find-content-h-main flex">
-                    <span class="find-content-h">
-                        Czego szukasz?
-                    </span>
-                    <select class="statform">
-                        <option>Mieszkanie</option>
-                    </select>
-                </div>
-                <div class="find-content-h-main flex">
-                    <span class="find-content-h">
-                        Rodzaj
-                    </span>
-                    <select class="statform">
-                        <option>Na sprzedaż</option>
-                    </select>
-                </div>
-                <div class="find-content-h-main flex">
-                    <span class="find-content-h">
-                        Liczba pokoi
-                    </span>
-                    <input class="statform nmpok" type="number" value="1" />
-                </div>
-            </div>
 
-
-
-
-
-
-
-
-
-
-
-            <div class="find-content-two flex">
-
-
-
-
-
-
-
-
-
-
-                <div class="cm-find-wrapper iw flex">
-                    <span class="find-content-h">
-                        Cena
-                    </span>
-                    <div class="cm-find-price-input ia flex">
-                        <div class="cm-find-field flex">
-                            <span class="cm-find-span">od</span>
-                            <input type="number" class="input-min statform ic" value="2500">
-
-                        </div>
-
-                        <div class="cm-find-field flex">
-                            <span class="cm-find-span">do</span>
-                            <input type="number" class="input-max statform ic" value="7500">
-
-                        </div>
-                    </div>
-                    <div class="cm-find-slider ie">
-                        <div class="cm-find-progress ie"></div>
-                    </div>
-                    <div class="cm-find-range-input if flex">
-                        <input type="range" class="range-min ir" min="0" max="10000" value="2500" step="100">
-                        <input type="range" class="range-max ir" min="0" max="10000" value="7500" step="100">
-                    </div>
-                </div>
-            
-                <div class="cm-find-wrapper-two iw flex">
-                    <span class="find-content-h">
-                        Powierzchnia
-                    </span>
-                    <div class="cm-find-price-input-two ia flex">
-                        <div class="cm-find-field-two flex">
-                            <span class="cm-find-span-two">Od</span>
-                            <input type="number" class="input-min-two statform ic" value="20">
-                            <span class="cm-find-span-two"> m2 </span>
-                        </div>
-                       
-                        <div class="cm-find-field-two  flex">
-                            <span class="cm-find-span-two"> do </span>
-                            <input type="number" class="input-max-two statform ic" value="9999">
-                            <span class="cm-find-span-two"> m2 </span>
-                        </div>
-                    </div>
-                    <div class="cm-find-slider-two ie">
-                        <div class="cm-find-progress-two ie"></div>
-                    </div>
-                    <div class="cm-find-range-input-two if flex">
-                        <input type="range" class="range-min-two ir" min="0" max="9999" value="20" step="100">
-                        <input type="range" class="range-max-two ir" min="0" max="9999" value="8000" step="100">
-                    </div>
-                </div>
-
-
-
-
-
-
-
-
-
-
-
-            </div>
-
-            <div class="cm-find-more flex">
-                <span class="cm-find-more-span">
-                    Więcej filtrów
-                </span>
-                <div class="cm-find-more-hide flex">
-                    <div class="cm-find-more-hide-one flex">
-                        <span class="cm-find-more-spans">
-                            Cena za m2
-                        </span>
-                        <div class="cm-find-more-hide-ones">
-                            od <input class="cm-find-input-number" type="number"/> zł/m2 do <input class="cm-find-input-number" type="number" />
-                        </div>
-                    </div>
-                    <div class="cm-find-mores-hide flex">
-                        <div class="cm-find-mores-box flex">
-                            <div class="cm-find-mores flex">
-                                <span class="cm-find-more-spans">
-                                    Rodzaj zabudowy
-                                </span>
-                                <input class="statform" type="text" />
-                            </div>
-                            <div class="cm-find-mores flex">
-                                <span class="cm-find-more-spans">
-                                    Piętro
-                                </span>
-                                <input class="statform" type="number" />
-                            </div>
-                            <div class="cm-find-mores flex">
-                                <span class="cm-find-more-spans">
-                                    Numer Oferty
-                                </span>
-                                <input class="statform" type="text" />
-                            </div>
-                        </div>
-                                <div class="cm-find-add flex">
-                                    <span class="cm-find-more-spans">Dodatkowe opcje </span>
-                                    <div class="cm-find-lokar">
-                                        <div class="cm-find-add-columns flex">
-                                            <div class="cm-find-columns-down">
-                                                <input name="balkon" type="checkbox" />
-                                                <label for="balkon"> balkon</label><br>
-                                            </div>
-                                            <div class="cm-find-columns-down">
-                                                <input name="pomieszczenie" type="checkbox" />
-                                                <label for="pomieszczenie"> pom. użytkowe</label><br>
-                                            </div>
-                                            <div class="cm-find-columns-down">
-                                                <input name="garaz" type="checkbox" />
-                                                <label for="garaz"> garaż/miejsce parkingowe</label><br>
-                                            </div>
-                                            <div class="cm-find-columns-down">
-                                                <input name="piwinica" type="checkbox" />
-                                                <label for="piwnica"> piwnica</label><br>
-                                            </div>
-                                            <div class="cm-find-columns-down">
-                                                <input name="ogrodek" type="checkbox" />
-                                                <label for="ogrodek"> ogredek</label><br>
-                                            </div>
-                                        </div>
-                                        <div class="cm-find-add-columns flex">
-                                            <div class="cm-find-columns-down">
-                                                <input name="taras" type="checkbox" />
-                                                <label for="taras"> taras</label><br>
-                                            </div>
-                                            <div class="cm-find-columns-down">
-                                                <input name="winda" type="checkbox" />
-                                                <label for="winda"> winda</label><br>
-                                            </div>
-                                            <div class="cm-find-columns-down">
-                                                <input name="dwupoziomowe" type="checkbox" />
-                                                <label for="dwupoziomowe"> dwupoziomowe</label><br>
-                                            </div>
-                                            <div class="cm-find-columns-down">
-                                                <input name="kuchnia" type="checkbox" />
-                                                <label for="kuchnia"> oddzielna kuchnia</label><br>
-                                            </div>
-                                            <div class="cm-find-columns-down">
-                                                <input name="klimatyzacja" type="checkbox" />
-                                                <label for="klimatyzacja"> klimatyzacja</label><br>
-                                            </div>
-                                        </div>
-                                    </div>
-                                   </div>
-                    </div>
-                </div>
-
-            </div>
-           
-
-
-        </form>
-    
-    </div>
-    <div class="cm-post-render">
+    <!--<div class="cm-post-render">
         <div class="cm-post-render-more">
             <div class="cm-post-box">
                 <img class="cm-post-box-img" src="~/img/prom/img1.jpg" />
@@ -680,5 +692,5 @@
             </div>
         </div>
 
-    </div>
+    </div>-->
 </div>
