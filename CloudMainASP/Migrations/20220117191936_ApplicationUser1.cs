@@ -201,6 +201,7 @@ namespace CloudMainASP.Migrations
                     City = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     NumberOfFloors = table.Column<int>(type: "int", nullable: false),
                     DateBuilt = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Zdjecia = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UserId = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ApplicationUserId = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },

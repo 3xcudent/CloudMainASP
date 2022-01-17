@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CloudMainASP.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220117191432_ApplicationUser1")]
+    [Migration("20220117191936_ApplicationUser1")]
     partial class ApplicationUser1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -89,6 +89,9 @@ namespace CloudMainASP.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Zdjecia")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
