@@ -26,10 +26,10 @@
                 <img src="~/img/@UserManager.GetUserAsync(User).Result.ProfilePicture" />
             </div>
             <span class="profile-span">
-                @UserManager.GetUserAsync(User).Result.UserName
+                @UserManager.GetUserAsync(User).Result.Name @UserManager.GetUserAsync(User).Result.Surname
             </span>
             <span class="profile-span">
-                @UserManager.GetUserAsync(User).Result.Email
+                @UserManager.GetUserAsync(User).Result.JoinDate
             </span>
 
         </div>
