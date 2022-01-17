@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace CloudMainASP.Models
@@ -24,7 +25,7 @@ namespace CloudMainASP.Models
         public DateTime BirthDate { get; set; }
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-        public DateTime JoinDate { get; set; }
-        public string ProfilePicture { get; set; }
+        public DateTime JoinDate { get; set; } = DateTime.Now;
+        public string ProfilePicture { get; set; } = "profile.png";
     }
 }

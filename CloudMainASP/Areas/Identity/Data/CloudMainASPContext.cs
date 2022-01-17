@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CloudMainASP.Areas.Identity.Data;
+using CloudMainASP.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace CloudMainASP.Data
 {
-    public class CloudMainASPContext : IdentityDbContext<CloudMainASPUser>
+    public class CloudMainASPContext : IdentityDbContext<ApplicationUser>
     {
         public CloudMainASPContext(DbContextOptions<CloudMainASPContext> options)
             : base(options)
