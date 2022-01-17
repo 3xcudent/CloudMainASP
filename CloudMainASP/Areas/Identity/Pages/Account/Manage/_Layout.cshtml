@@ -1,4 +1,5 @@
-﻿@using Microsoft.AspNetCore.Identity
+﻿@using CloudMainASP.Models
+@using Microsoft.AspNetCore.Identity
 @using CloudMainASP.Controllers
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
@@ -25,7 +26,7 @@
                 <img src="~/img/@UserManager.GetUserAsync(User).Result.ProfilePicture" />
             </div>
             <span class="profile-span">
-                @UserManager.GetUserAsync(User).Result.Username
+                @UserManager.GetUserAsync(User).Result.UserName
             </span>
             <span class="profile-span">
                 @UserManager.GetUserAsync(User).Result.Email
