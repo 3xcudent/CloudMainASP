@@ -90,6 +90,14 @@ a {
         font-size: 15px;
         color: #208af1;
     }
+article {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    font-size: 12px;
+    padding: 20px;
+    color: #394954;
+}
 #logout {
     background: none;
     border: none;
@@ -306,11 +314,11 @@ img.cm-post-box-img {
 .body-post {
     background: url(/img/bgmain.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: right;
+    background-size: 50%;
+    background-position: top right;
 }
 
-}
+
 
 
 .panel {

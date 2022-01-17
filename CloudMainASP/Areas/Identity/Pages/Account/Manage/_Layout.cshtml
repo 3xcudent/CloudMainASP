@@ -1,4 +1,8 @@
-﻿@{
+﻿@using Microsoft.AspNetCore.Identity
+@using CloudMainASP.Controllers
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+@{
     if (ViewData.TryGetValue("ParentLayout", out var parentLayout))
     {
         Layout = (string)parentLayout;
@@ -9,17 +13,32 @@
     }
 }
 
-<h2>Manage your account</h2>
 
-<div>
-    <h4>Change your account settings</h4>
-    <hr />
-    <div class="row">
-        <div class="col-md-3">
-            <partial name="_ManageNav" />
+<div class="profile-edit">
+    <div class="profile-image-bg">
+
+    </div>
+    <div class="profile-row">
+
+        <div class="profile-row-left">
+            <div class="profile-img-avatr">
+                <img src="~/img/@UserManager.GetUserAsync(User).Result.ProfilePicture" />
+            </div>
+            <span class="profile-span">
+                @UserManager.GetUserAsync(User).Result.Username
+            </span>
+            <span class="profile-span">
+                @UserManager.GetUserAsync(User).Result.Email
+            </span>
+
         </div>
-        <div class="col-md-9">
-            @RenderBody()
+        <div class="profile-row-right">
+            <div class="profile-col-one">
+                <partial name="_ManageNav" />
+            </div>
+            <div class="profile-col-two">
+                @RenderBody()
+            </div>
         </div>
     </div>
 </div>

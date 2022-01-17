@@ -23,6 +23,15 @@ namespace CloudMainASP.Controllers
             return View();
         }
 
+    
+        [HttpGet]
+        [Route("regulamin")]
+        public IActionResult Regulamin()
+        {
+            return View();
+        }
+        [HttpGet]
+        [Route("privacy")]
         public IActionResult Privacy()
         {
             return View();

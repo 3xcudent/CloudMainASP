@@ -18,11 +18,12 @@
                 </div>
                 <div class="nav-right flex">
                     <div class="nav-menu flex">
-                        <a asp-action="" class="menu-a">Ogłoszenia</a>
-                        <a asp-action="/home" class="menu-a">Regulamin</a>
-                        <a asp-action="/home" class="menu-a">Kontakt</a>
-                        <a asp-action="/home" class="menu-a">O nas</a>
-                        <a asp-action="/home" class="menu-a">Poradnik</a>
+                        <a asp-page="" class="menu-a">Ogłoszenia</a>
+                        <a href="~/regulamin" class="menu-a">Regulamin</a>
+                        <a href="~/privacy" class="menu-a">Polityka Prywatności</a>
+                        <a asp-page="/home" class="menu-a">Kontakt</a>
+                        <a asp-page="/home" class="menu-a">O nas</a>
+                        
                     </div>
 
 
@@ -71,19 +72,19 @@
                             CloudMain.pl
                         </span>
                         <div class="footer-top-box-more">
-                            <a class="footer-a" href="#">  O nas</a>
+                            <a class="footer-a" asp-page="/aboutus">  O nas</a>
                         </div>
                         <div class="footer-top-box-more">
                             <a class="footer-a" href="#">  Cennik</a>
                         </div>
                         <div class="footer-top-box-more">
-                            <a class="footer-a" href="#">  Obsługa Klienta</a>
+                            <a class="footer-a" asp-page="/regulamin">  Regulamin</a>
                         </div>
                         <div class="footer-top-box-more">
                             <a class="footer-a" href="#"> Ustawienia plików cookie</a>
                         </div>
                         <div class="footer-top-box-more">
-                            <a class="footer-a" href="#"> Polityka prywatności</a>
+                            <a class="footer-a" asp-page="/privacy"> Polityka prywatności</a>
                         </div>
                     </div>
                     <div class="footer-top-more flex">
