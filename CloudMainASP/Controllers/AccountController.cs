@@ -2,7 +2,9 @@
 using CloudMainASP.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.IO;
+using System.Security.Claims;
 
 namespace CloudMainASP.Controllers
 {
@@ -12,10 +14,14 @@ namespace CloudMainASP.Controllers
         {
             return View("~/Index");
         }
-        public string GetProfilePicture(ApplicationUser user)
+        public string GetUserId(ClaimsPrincipal principal)
         {
-            string picture = user.ProfilePicture;
-            return picture;
-         }
+            if (principal == null)
+            {
+                throw new ArgumentNullException(nameof(principal));
+            }
+            var claim = principal.FindFirst(ClaimTypes.NameIdentifier);
+            return claim != null ? claim.Value : null;
+        }
     }
 }
