@@ -601,7 +601,9 @@ footer.cm-footer {
     flex-direction: column;
     min-height: 100vh;
 }
-
+.add-form > .form-group {
+    max-width: none !important;
+}
 .cm-error {
     width: 100%;
     max-width: 430px;
@@ -1618,11 +1620,50 @@ span.cm-find-span {
 .cm-find-add {
     flex-direction: column;
 }
+.kontakt-form {
+    display: flex;
+    flex-direction: column;
 
+}
+.kontakt-main {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+}
 .cm-find-mores-hide {
     flex-direction: column;
 }
-
+.input-add {
+    width: 100%;
+    border-radius: 4px;
+    padding: 10px;
+    border: 1px solid #dddddd;
+}
+.add-main-more {
+    width: 100%;
+    margin: auto;
+    max-width: 900px;
+    padding: 10px;
+}
+.input-add-send {
+    background: #4caf50;
+    color: white;
+    padding: 17px;
+}
+.kontakt-input {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #e1dede;
+    border-radius: 4px;
+}
+.kontakt-mess {
+    min-height: 300px;
+    display: flex;
+}
+.kontat-send {
+    background: #005180;
+    color: white;
+}
 .statform {
     padding: 10px;
     border: 1px solid #ececec;

@@ -61,5 +61,11 @@ namespace CloudMainASP.Controllers
         {
             return View();
         }
+        [HttpGet]
+        [Route("kontakt")]
+        public IActionResult kontakt()
+        {
+            return View();
+        }
     }
 }
