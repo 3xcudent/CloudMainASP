@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace CloudMainASP.Views.Home
 {
-    public class Index1Model : PageModel
+    public class listagenerowana : PageModel
     {
         public void OnGet()
         {

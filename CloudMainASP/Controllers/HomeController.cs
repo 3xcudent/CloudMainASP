@@ -42,5 +42,12 @@ namespace CloudMainASP.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+        [HttpGet]
+        [Route("listagenerowana")]
+        public IActionResult listagenerowana()
+        {
+            return View();
+        }
     }
 }

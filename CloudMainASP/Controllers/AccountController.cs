@@ -27,7 +27,7 @@ namespace CloudMainASP.Controllers
         [Route("AddOffer")]
         public IActionResult AddOffer()
         {
-            return View("/Areas/Identity/Pages/Account/addoffer.cshtml");
+            return View("/Areas/Identity/Pages/Account/AddOffer.cshtml");
         }
     }
 }

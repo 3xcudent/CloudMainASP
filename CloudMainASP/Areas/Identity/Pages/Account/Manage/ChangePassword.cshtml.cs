@@ -48,7 +48,7 @@ namespace CloudMainASP.Areas.Identity.Pages.Account.Manage
 
             [DataType(DataType.Password)]
             [Display(Name = "Confirm new password")]
-            [Compare("NewPassword", ErrorMessage = "The new password and confirmation password do not match.")]
+            [Compare("NewPassword", ErrorMessage = "Hasło nie jest takie same jak hasło potwierdzające.")]
             public string ConfirmPassword { get; set; }
         }
 
