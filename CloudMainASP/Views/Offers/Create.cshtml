@@ -1,7 +1,9 @@
-﻿@model CloudMainASP.Models.Offers
-
+﻿@using Microsoft.AspNetCore.Identity
+@model CloudMainASP.Models.Offers
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
 @{
-    
+
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -27,17 +29,23 @@
                 <span asp-validation-for="Price" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label for="files">Dodaj zdjęcia</label>
+                <input type="file" id="files" name="files" multiple><br><br>
+               
+            </div>
+
+            <div class="form-group">
 
                 <span class="add-span">Ilość pomieszczeń</span>
-                <input asp-for="NumerOfRooms" class="input-add"  placeholder="Ilość pomieszczeń"/>
+                <input asp-for="NumerOfRooms" class="input-add" placeholder="Ilość pomieszczeń" />
                 <span asp-validation-for="NumerOfRooms" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                
+
                 <label for="State">Stan budowli</label>
 
-                <select asp-for="State" name="State" id="State">
+                <select asp-for="State" name="State" id="State" class="input-add">
                     <option value="Developerski">Developerski</option>
                     <option value="Wykończony">Wykończony</option>
                     <option value="Surowy">Surowy</option>
@@ -46,89 +54,109 @@
                 <span asp-validation-for="State" class="text-danger"></span>
             </div>
             <div class="form-group">
-               
-                
+
+
 
 
 
                 <label for="TypeOfBuilding">Rodzaj budowli</label>
 
-                <select asp-for="TypeOfBuilding" name="TypeOfBuilding" id="TypeOfBuilding">
+                <select asp-for="TypeOfBuilding" name="TypeOfBuilding" id="TypeOfBuilding" class="input-add">
                     <option value="Blok">Blok</option>
-                    <option value="DomwolnostojAcy">Dom wolnostojący</option>
+                    <option value="Dom wolnostojAcy">Dom wolnostojący</option>
                     <option value="Blizniak">Blizniak</option>
-                    <option value="Domwielorodzinny">Dom wielorodzinny</option>
+                    <option value="Dom Wielorodzinny">Dom wielorodzinny</option>
                     <option value="Umeblowany">Dom wielorodzinny</option>
                 </select>
                 <span asp-validation-for="TypeOfBuilding" class="text-danger"></span>
 
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input input-add" asp-for="Negotiable" /> @Html.DisplayNameFor(model => model.Negotiable)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+               
+               
+                
+                
+                <label for="State">Kto sprzedaje</label>
+
+                <select asp-for="Availability" name="State" id="State" class="input-add">
+                    <option value="Osoba Prywatna">Osoba prywatna</option>
+                    <option value="Developer">Developer</option>
+                </select>
+                
+                <span asp-validation-for="Availability" class="text-danger"></span>
+
+
+
+
+
+
+
+
 
             </div>
             <div class="form-group">
-                <span class="add-span">Tytuł ogłoszenia</span>
-                <input asp-for="Availability" class="input-add" />
-                <span asp-validation-for="Availability" class="text-danger"></span>
-            </div>
-            <div class="form-group">
                 <span class="add-span">Metraż pomieszczeń</span>
-                <input asp-for="FloorSpace" class="input-add" placeholder="Ilość pomieszczeń" />
+                <input asp-for="FloorSpace" class="input-add" placeholder="Suma całkowita metrażu" />
                 <span asp-validation-for="FloorSpace" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <span class="add-span">Piętro</span>
-                <input asp-for="Floor" class="input-add" placeholder="Piętro"/>
+                <input asp-for="Floor" class="input-add" placeholder="Piętro" />
                 <span asp-validation-for="Floor" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <span class="add-span">Ilość pięter</span>
+                <input asp-for="NumberOfFloors" class="input-add" placeholder="Ilość pięter" />
+                <span asp-validation-for="NumberOfFloors" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <span class="add-span">Rok powstania budowli</span>
+                <input asp-for="DateBuilt" class="input-add" placeholder="2022" />
+                <span asp-validation-for="DateBuilt" class="text-danger"></span>
+            </div>
+            <h4>Dane kontaktowe</h4>
+            <div class="form-group">
                 <span class="add-span">Numer kontaktowy</span>
-                <input asp-for="ContactNumber" class="input-add" placeholder="123 456 789"/>
+                <input asp-for="ContactNumber" class="input-add" placeholder="123 456 789" />
                 <span asp-validation-for="ContactNumber" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <span class="add-span">Email kontaktowy</span>
-                <input asp-for="ContactEmail" class="input-add" placeholder="nazwa@gmail.com"/>
+                <input asp-for="ContactEmail" class="input-add" placeholder="nazwa@gmail.com" />
                 <span asp-validation-for="ContactEmail" class="text-danger"></span>
             </div>
 
-
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input input-add" asp-for="Negotiable" /> @Html.DisplayNameFor(model => model.Negotiable)
-                </label>
-            </div>
             <div class="form-group">
-                < <span class="add-span">Numer domu</span>
-                <input asp-for="HouseNumber" class="input-add" placeholder="Numer domu"/>
-                <span asp-validation-for="HouseNumber" class="text-danger"></span>
+                <span class="add-span">Miasto</span>
+                <input asp-for="City" class="input-add" placeholder="Miasto" />
+                <span asp-validation-for="City" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <span class="add-span">Ulica</span>
-                <input asp-for="Street" class="input-add" placeholder="Ulica"/>
+                <input asp-for="Street" class="input-add" placeholder="Ulica" />
                 <span asp-validation-for="Street" class="text-danger"></span>
             </div>
+            <div class="form-group">
+                 <span class="add-span">Numer domu</span>
+                <input asp-for="HouseNumber" class="input-add" placeholder="Numer domu" />
+                <span asp-validation-for="HouseNumber" class="text-danger"></span>
+            </div>
+
             <div class="form-group">
                 <span class="add-span">Kod pocztowy</span>
                 <input asp-for="PostCode" class="input-add" placeholder="00-000" />
                 <span asp-validation-for="PostCode" class="text-danger"></span>
             </div>
+
+
             <div class="form-group">
-                <span class="add-span">Miasto</span>
-                <input asp-for="City" class="input-add" placeholder="Miasto"/>
-                <span asp-validation-for="City" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <span class="add-span">Ilość pięter</span>
-                <input asp-for="NumberOfFloors" class="input-add" placeholder="Ilość pięter"/>
-                <span asp-validation-for="NumberOfFloors" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <span class="add-span">Rok powstania budowli</span>
-                <input asp-for="DateBuilt" class="input-add" placeholder="2022"/>
-                <span asp-validation-for="DateBuilt" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <span class="add-span">Tytuł ogłoszenia</span>
-                <input asp-for="UserId" class="input-add" />
+
+                <input disabled asp-for="UserId" class="input-add-last" value="@UserManager.GetUserId(User)" />
                 <span asp-validation-for="UserId" class="text-danger"></span>
             </div>
             <div class="form-group">

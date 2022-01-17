@@ -613,7 +613,9 @@ footer.cm-footer {
     flex-direction: column;
     align-items: center;
 }
-
+.input-add-last {
+    display:none;
+}
 img.cm-error-img {
     width: inherit;
     max-width: inherit;
