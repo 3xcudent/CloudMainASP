@@ -30,7 +30,7 @@ namespace CloudMainASP.Models
         public string City { get; set; }
         public int NumberOfFloors { get; set; }
         public string DateBuilt { get; set; }
-        public int UserId { get; set; }
+        public string UserId { get; set; }
         public virtual ApplicationUser ApplicationUser { get; set; }
     }
 }

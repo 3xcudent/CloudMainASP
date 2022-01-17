@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace CloudMainASP.Data.Migrations
+namespace CloudMainASP.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220117160707_Input")]
-    partial class Input
+    [Migration("20220117180310_ApplicationUser")]
+    partial class ApplicationUser
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

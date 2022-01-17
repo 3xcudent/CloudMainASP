@@ -19,5 +19,6 @@ namespace CloudMainASP.Data
         }
         public DbSet<ApplicationUser> ApplicationUser { get; set; }
         public DbSet<Offers> Offers { get; set; }
+        public DbSet<Zdjecia> Zdjecia { get; set; }
     }
 }
