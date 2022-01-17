@@ -305,7 +305,38 @@ img.cm-post-box-img {
     color: white;
     justify-content: space-between;
 }
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 250px;
+    padding: 10px 0;
+}
+form {
+    width: 100%;
+    padding: 10px;
+}
+.profile-row-right {
+    background: #f4faff;
+    width: 80%;
+}
+element.style {
+}
 
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 250px;
+    padding: 10px 0;
+}
+.update-profile-button {
+    padding: 10px 20px;
+    background: #4caf50;
+    border: none;
+    border-radius: 4px;
+    color: white;
+}
 
 .profile-img-avatr {
     width: 100px;
@@ -319,7 +350,45 @@ img.cm-post-box-img {
     height: 21px;
     width: 25px;
 }
-
+.text-danger > ul {
+    display: none;
+}
+.nav-item {
+    padding: 5px 0;
+}
+.profile-text-input {
+    padding: 7px;
+    border-radius: 4px;
+    border: 1px solid #ede8e8;
+    width: 100%;
+    max-width: 270px;
+}
+span.text-danger {
+    font-size: 12px;
+    color: #ff5722;
+    padding: 5px 0;
+}
+.profile-row-left {
+    width: 100%;
+    max-width: 20%;
+    align-items: center;
+    display: flex;
+    border-right: 1px solid #e1e1e1;
+    flex-direction: column;
+    background: #ebf4fb;
+}
+img.profile-imgs-avatar {
+    width: 100%;
+    max-width: 100px;
+    padding: 10px;
+    height: 100px;
+}
+span.profile-span {
+    padding: 10px 0;
+}
+ul.nav.nav-pills.flex-column {
+    list-style: none;
+}
 .body-post {
     background: url(/img/bgmain.jpg);
     background-repeat: no-repeat;
@@ -333,6 +402,7 @@ img.cm-post-box-img {
     height: 150px;
     background-size: cover;
     background-position-y: -555px;
+    border-radius: 4px;
 }
 .profile-edit {
     width: 100%;
@@ -948,13 +1018,31 @@ input.cm-reg-form-box-class {
 .nav-menu-mobile {
     flex-direction: column;
 }
-
-.close {
-    font-size: 20px;
-    width: auto;
-    height: auto;
-    padding: 20px;
+.alert-success {
+    background: #2196f3;
+    color: white;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    height: 50px;
 }
+    .alert-success > .close {
+
+    background: #2196f3;
+    border: none;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    color: white;
+
+    }
+
+    .close {
+        font-size: 20px;
+        width: auto;
+        height: auto;
+        padding: 20px;
+    }
 
 .navTrigger {
     cursor: pointer;

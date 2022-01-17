@@ -90,7 +90,7 @@ namespace CloudMainASP.Areas.Identity.Pages.Account.Manage
             }
 
             await _signInManager.RefreshSignInAsync(user);
-            StatusMessage = "Your profile has been updated";
+            StatusMessage = "Profil został zaktualizowany";
             return RedirectToPage();
         }
     }
