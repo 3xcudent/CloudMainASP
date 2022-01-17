@@ -23,11 +23,5 @@ namespace CloudMainASP.Controllers
             var claim = principal.FindFirst(ClaimTypes.NameIdentifier);
             return claim != null ? claim.Value : null;
         }
-        [HttpGet]
-        [Route("AddOffer")]
-        public IActionResult AddOffer()
-        {
-            return View("/Areas/Identity/Pages/Account/AddOffer.cshtml");
-        }
     }
 }

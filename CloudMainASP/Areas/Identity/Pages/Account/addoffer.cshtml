@@ -1,37 +1,35 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model CloudMainASP.Areas.Identity.Pages.Account.Manage.AddOffer
 
 
-<div class="addoffer">
+
+<div>
     <form method="post">
-        <input type="text" placeholder="Tytul" />
-        <input type="text" placeholder="Opis" />
-        <input type="text" placeholder="Status" />
-        <select name="Rodzaj budowli">
+        <input asp-for="Input.Title" type="text" placeholder="Tytul" />
+        <input asp-for="Input.Description" type="text" placeholder="Opis" />
+        <input asp-for="Input.State" type="text" placeholder="Stan" />
+        <select asp-for="Input.TypeOfBuilding" name="Rodzaj budowli">
             <option>Kamienica</option>
             <option>Dom</option>
         </select>
-        <select name="Dostepnosc">
+        <select asp-for="Input.Availability" name="Dostepnosc">
             <option>Najem</option>
             <option>Kupno</option>
         </select>
-        <input type="text" placeholder="Metraz" />
-        <input type="text" placeholder="Pietro" />
-        <input type="text" placeholder="Numer kontaktowy" />
-        <input type="text" placeholder="Email Kontaktowy" />
-        <input type="text" placeholder="Cena" />
-        <select name="Negocjiacja">
+        <input asp-for="Input.FloorSpace" type="text" placeholder="Metraz" />
+        <input asp-for="Input.NumberOfFloors" type="text" placeholder="Pietra" />
+        <input asp-for="Input.ContactNumber" type="text" placeholder="Numer kontaktowy" />
+        <input asp-for="Input.ContactEmail" type="text" placeholder="Email Kontaktowy" />
+        <input asp-for="Input.Price" type="text" placeholder="Cena" />
+        <select asp-for="Input.Negotiable" name="Negocjiacja">
             <option>tak</option>
             <option>nie</option>
         </select>
-        <input type="text" placeholder="Numer domu" />
-        <input type="text" placeholder="ulica" />
-        <input type="text" placeholder="kod pocztowy" />
-        <input type="text" placeholder="miasto" />
-        <input type="text" placeholder="jakie pietro" />
-        <input type="date" placeholder="data budowli" />
+        <input asp-for="Input.HouseNumber" type="text" placeholder="Numer domu" />
+        <input asp-for="Input.Street" type="text" placeholder="ulica" />
+        <input asp-for="Input.PostCode" type="text" placeholder="kod pocztowy" />
+        <input asp-for="Input.City" type="text" placeholder="miasto" />
+        <input asp-for="Input.Floor" type="text" placeholder="jakie pietro" />
+        <input asp-for="Input.DateBuilt" type="text" placeholder="data budowli" />
+        <input class="cm-form-button cm-form-login" type="submit" value="Dodaj">
     </form>
 </div>
