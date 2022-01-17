@@ -1,5 +1,6 @@
 ﻿using CloudMainASP.Controllers;
 using CloudMainASP.Models;
+using CloudMainASP.OfferEdit;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -50,35 +51,35 @@ namespace CloudMainASP.Areas.Identity.Pages.Account.Manage
             public string DateBuilt { get; set; }
             public int UserId { get; set; }
         }
-        public IActionResult OnPost(string returnUrl = null)
-        {
-            ReturnUrl = Url.Content("~/");
-            var user = _userManager.GetUserAsync(User);
-            OfferController controller = new OfferController();
-            var offer = new Offers
-            {
-                NumerOfRooms = Input.NumerOfRooms,
-                Title = Input.Title,
-                State = Input.State,
-                TypeOfBuilding = Input.TypeOfBuilding,
-                Availability = Input.Availability,
-                FloorSpace = Input.FloorSpace,
-                Floor = Input.Floor,
-                ContactNumber = Input.ContactNumber,
-                ContactEmail = Input.ContactEmail,
-                Description = Input.Description,
-                Price = Input.Price,
-                Negotiable = Input.Negotiable,
-                HouseNumber = Input.HouseNumber,
-                Street = Input.Street,
-                PostCode = Input.PostCode,
-                City = Input.City,
-                NumberOfFloors = Input.NumberOfFloors,
-                DateBuilt = Input.DateBuilt,
-                UserId = user.Id
-            };
-            controller.Create(offer);
-            return Page();
-        }
+        //public IActionResult OnPost(string returnUrl = null)
+        //{
+        //    ReturnUrl = Url.Content("~/");
+        //    var user = _userManager.GetUserAsync(User);
+        //    OffersController controller = new OffersController();
+        //    var offer = new Offers
+        //    {
+        //        NumerOfRooms = Input.NumerOfRooms,
+        //        Title = Input.Title,
+        //        State = Input.State,
+        //        TypeOfBuilding = Input.TypeOfBuilding,
+        //        Availability = Input.Availability,
+        //        FloorSpace = Input.FloorSpace,
+        //        Floor = Input.Floor,
+        //        ContactNumber = Input.ContactNumber,
+        //        ContactEmail = Input.ContactEmail,
+        //        Description = Input.Description,
+        //        Price = Input.Price,
+        //        Negotiable = Input.Negotiable,
+        //        HouseNumber = Input.HouseNumber,
+        //        Street = Input.Street,
+        //        PostCode = Input.PostCode,
+        //        City = Input.City,
+        //        NumberOfFloors = Input.NumberOfFloors,
+        //        DateBuilt = Input.DateBuilt,
+        //        UserId = user.Id
+        //    };
+        //    controller.Create(offer);
+        //    return Page();
+        //}
     }
 }
