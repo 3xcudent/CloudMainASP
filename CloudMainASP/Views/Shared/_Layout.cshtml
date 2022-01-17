@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 </head>
 <body>
     <div class="cm-box-main">
@@ -23,149 +25,167 @@
                         <a href="~/privacy" class="menu-a">Polityka Prywatności</a>
                         <a asp-page="/home" class="menu-a">Kontakt</a>
                         <a asp-page="/home" class="menu-a">O nas</a>
-                        
+
                     </div>
 
 
                     <partial name="_LoginPartial" />
-           
+
 
                 </div>
-                    <div class="nav-mobile">
+                <div class="nav-mobile">
+                    <div class="nav-menu-log flex">
+                        <a asp-action="signup" class="menu-log-input log-join">Dołącz</a>
+                        <a asp-action="signin" class="menu-log-input log-login">Zaloguj się</a>
+                    </div>
+                    <div class="wrappers">
+                        <div class="navTrigger">
+                            <i></i><i></i><i></i>
+                        </div>
+                    </div>
+                    <div class="nav-menu-mobile">
+                        <div class="nav-menu flex">
+                            <a asp-action="home" class="menu-a">Ogłoszenia</a>
+                            <a asp-action="home" class="menu-a">Regulamin</a>
+                            <a asp-action="home" class="menu-a">Kontakt</a>
+                            <a asp-action="home" class="menu-a">O nas</a>
+                            <a asp-action="home" class="menu-a">Poradnik</a>
+                        </div>
                         <div class="nav-menu-log flex">
                             <a asp-action="signup" class="menu-log-input log-join">Dołącz</a>
                             <a asp-action="signin" class="menu-log-input log-login">Zaloguj się</a>
                         </div>
-                        <div class="wrappers">
-                            <div class="navTrigger">
-                                <i></i><i></i><i></i>
-                            </div>
-                        </div>
-                        <div class="nav-menu-mobile">
-                            <div class="nav-menu flex">
-                                <a asp-action="home" class="menu-a">Ogłoszenia</a>
-                                <a asp-action="home" class="menu-a">Regulamin</a>
-                                <a asp-action="home" class="menu-a">Kontakt</a>
-                                <a asp-action="home" class="menu-a">O nas</a>
-                                <a asp-action="home" class="menu-a">Poradnik</a>
-                            </div>
-                          <div class="nav-menu-log flex">
-                                <a asp-action="signup" class="menu-log-input log-join">Dołącz</a>
-                                <a asp-action="signin" class="menu-log-input log-login">Zaloguj się</a>
-                            </div>
 
 
-                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+
+        @RenderBody()
+
+    </div>
+    <footer class="cm-footer">
+        <div class="cm-footer-box flex">
+            <div class="cm-footer-top flex">
+                <div class="footer-top-more flex">
+                    <span class="footer-top-box-more footer-top-span">
+                        CloudMain.pl
+                    </span>
+                    <div class="footer-top-box-more">
+                        <a class="footer-a" asp-page="/aboutus">  O nas</a>
+                    </div>
+                    <div class="footer-top-box-more">
+                        <a class="footer-a" href="#">  Cennik</a>
+                    </div>
+                    <div class="footer-top-box-more">
+                        <a class="footer-a" asp-page="/regulamin">  Regulamin</a>
+                    </div>
+                    <div class="footer-top-box-more">
+                        <a class="footer-a" href="#"> Ustawienia plików cookie</a>
+                    </div>
+                    <div class="footer-top-box-more">
+                        <a class="footer-a" asp-page="/privacy"> Polityka prywatności</a>
+                    </div>
+                </div>
+                <div class="footer-top-more flex">
+                    <span class="footer-top-box-more footer-top-span">
+                        Usługi
+                    </span>
+                    <div class="footer-top-box-more">
+                        <a class="footer-a" href="#">   Dodaj ogłoszenie</a>
+                    </div>
+                    <div class="footer-top-box-more">
+                        <a class="footer-a" href="#">  CloudMain ADS</a>
+                    </div>
+                    <div class="footer-top-box-more">
+                        <a class="footer-a" href="#"> Regulamin</a>
+                    </div>
+
+                    <div class="footer-top-box-more">
+                        <a class="footer-a" href="#">Wzory umów</a>
+                    </div>
+
+
+                </div>
+                <div class="footer-top-more flex">
+                    <span class="footer-top-box-more footer-top-span">
+                        Szybkie Linki
+                    </span>
+                    <div class="footer-top-box-more">
+                        <a class="footer-a" href="#"> Zarządzaj mieszkaniami</a>
+                    </div>
+                    <div class="footer-top-box-more">
+                        <a class="footer-a" href="#"> Dodaj ogłoszenie</a>
+                    </div>
+                    <div class="footer-top-box-more">
+                        <a class="footer-a" href="#"> Usuń ogłoszenie</a>
+                    </div>
+                    <div class="footer-top-box-more">
+                        <a class="footer-a" href="#">Zobacz ogłoszenia</a>
                     </div>
 
                 </div>
-            </nav>
-
-            @RenderBody()
+                <div class="footer-top-more flex">
+                    <span class="footer-top-box-more footer-top-span">
+                        Menu jeden wieksze
+                    </span>
+                    <div class="footer-top-box-more">
+                        jeden dwa trzy cztery
+                    </div>
+                    <div class="footer-top-box-more">
+                        jeden dwa trzy cztery
+                    </div>
+                    <div class="footer-top-box-more">
+                        jeden dwa trzy cztery
+                    </div>
+                    <div class="footer-top-box-more">
+                        jeden dwa trzy cztery
+                    </div>
+                    <div class="footer-top-box-more">
+                        jeden dwa trzy cztery
+                    </div>
+                </div>
+            </div>
 
         </div>
-        <footer class="cm-footer">
-            <div class="cm-footer-box flex">
-                <div class="cm-footer-top flex">
-                    <div class="footer-top-more flex">
-                        <span class="footer-top-box-more footer-top-span">
-                            CloudMain.pl
-                        </span>
-                        <div class="footer-top-box-more">
-                            <a class="footer-a" asp-page="/aboutus">  O nas</a>
-                        </div>
-                        <div class="footer-top-box-more">
-                            <a class="footer-a" href="#">  Cennik</a>
-                        </div>
-                        <div class="footer-top-box-more">
-                            <a class="footer-a" asp-page="/regulamin">  Regulamin</a>
-                        </div>
-                        <div class="footer-top-box-more">
-                            <a class="footer-a" href="#"> Ustawienia plików cookie</a>
-                        </div>
-                        <div class="footer-top-box-more">
-                            <a class="footer-a" asp-page="/privacy"> Polityka prywatności</a>
-                        </div>
-                    </div>
-                    <div class="footer-top-more flex">
-                        <span class="footer-top-box-more footer-top-span">
-                            Usługi
-                        </span>
-                        <div class="footer-top-box-more">
-                            <a class="footer-a" href="#">   Dodaj ogłoszenie</a>
-                        </div>
-                        <div class="footer-top-box-more">
-                            <a class="footer-a" href="#">  CloudMain ADS</a>
-                        </div>
-                        <div class="footer-top-box-more">
-                            <a class="footer-a" href="#"> Regulamin</a>
-                        </div>
-
-                        <div class="footer-top-box-more">
-                            <a class="footer-a" href="#">Wzory umów</a>
-                        </div>
-
-
-                    </div>
-                    <div class="footer-top-more flex">
-                        <span class="footer-top-box-more footer-top-span">
-                            Szybkie Linki
-                        </span>
-                        <div class="footer-top-box-more">
-                            <a class="footer-a" href="#"> Zarządzaj mieszkaniami</a>
-                        </div>
-                        <div class="footer-top-box-more">
-                            <a class="footer-a" href="#"> Dodaj ogłoszenie</a>
-                        </div>
-                        <div class="footer-top-box-more">
-                            <a class="footer-a" href="#"> Usuń ogłoszenie</a>
-                        </div>
-                        <div class="footer-top-box-more">
-                            <a class="footer-a" href="#">Zobacz ogłoszenia</a>
-                        </div>
-
-                    </div>
-                    <div class="footer-top-more flex">
-                        <span class="footer-top-box-more footer-top-span">
-                            Menu jeden wieksze
-                        </span>
-                        <div class="footer-top-box-more">
-                            jeden dwa trzy cztery
-                        </div>
-                        <div class="footer-top-box-more">
-                            jeden dwa trzy cztery
-                        </div>
-                        <div class="footer-top-box-more">
-                            jeden dwa trzy cztery
-                        </div>
-                        <div class="footer-top-box-more">
-                            jeden dwa trzy cztery
-                        </div>
-                        <div class="footer-top-box-more">
-                            jeden dwa trzy cztery
-                        </div>
-                    </div>
+        <div class="cm-footer-down">
+            <div class="cm-footer-down-sd flex">
+                <div class="cm-footer-down-left">
+                    <a class="flex" asp-action="index"><img src="~/img/logo-footer.png" /></a>
                 </div>
-
-            </div>
-            <div class="cm-footer-down">
-                <div class="cm-footer-down-sd flex">
-                    <div class="cm-footer-down-left">
-                        <a class="flex" asp-action="index"><img src="~/img/logo-footer.png" /></a>
-                    </div>
-                    <div class="cm-footer-down-right flex">
-                        <span class="cm-footer-down-span">   © 2021-2022 CloudMain.pl</span>
-                        <span class="cm-footer-down-span">Korzystanie z serwisu oznacza akceptację regulaminu.</span>
-                    </div>
+                <div class="cm-footer-down-right flex">
+                    <span class="cm-footer-down-span">   © 2021-2022 CloudMain.pl</span>
+                    <span class="cm-footer-down-span">Korzystanie z serwisu oznacza akceptację regulaminu.</span>
                 </div>
             </div>
-        </footer>
+        </div>
+    </footer>
 
 
-        <script src="~/lib/jquery/dist/jquery.min.js"></script>
-        <script src="~/js/site.js" asp-append-version="true"></script>
-        <script src="/js/script.js" asp-append-version="true"></script>
-        <script src="~/js/script.js"></script>
-        @await RenderSectionAsync("Scripts", required: false)
-    </body>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="/js/script.js" asp-append-version="true"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="~/js/script.js"></script>
+    <script>
+   
+        var swiper = new Swiper(".mySwiper", {
+            loop: true,
+            spaceBetween: 10,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+        var swiper2 = new Swiper(".mySwiper2", {
+            loop: true,
+            spaceBetween: 10,
+       
+          
+        });
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
     </html>

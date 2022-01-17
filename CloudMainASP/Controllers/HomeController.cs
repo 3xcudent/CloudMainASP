@@ -49,12 +49,11 @@ namespace CloudMainASP.Controllers
         {
             return View();
         }
-
         [HttpGet]
-        [Route("AddOffer")]
-        public IActionResult AddOffer()
+        [Route("wyswietlanie")]
+        public IActionResult wyswietlanie()
         {
-            return View("/Areas/Identity/Pages/Account/AddOffer.cshtml");
+            return View();
         }
     }
 }

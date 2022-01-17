@@ -368,6 +368,13 @@ span.text-danger {
     color: #ff5722;
     padding: 5px 0;
 }
+.show-offer-add-content {
+    flex-grow: 7;
+    display: flex;
+}
+.show-offer-span {
+    padding: 10px 0;
+}
 .profile-row-left {
     width: 100%;
     max-width: 20%;
@@ -376,6 +383,24 @@ span.text-danger {
     border-right: 1px solid #e1e1e1;
     flex-direction: column;
     background: #ebf4fb;
+    padding: 0 0 50px 0;
+}
+.show-offer-main {
+    width: 100%;
+    max-width: 1339px;
+    margin: auto;
+    display: flex;
+    height: auto;
+    flex-direction: column;
+}
+.show-offer-content {
+    display: flex;
+    flex-direction: column;
+}
+.swiper-slide > img {
+    width: 100%;
+    max-width: 700px;
+
 }
 img.profile-imgs-avatar {
     width: 100%;
@@ -385,6 +410,18 @@ img.profile-imgs-avatar {
 }
 span.profile-span {
     padding: 10px 0;
+}
+.show-offer-img {
+    width: 100%;
+    max-width: 700px;
+}
+.swiper {
+   
+}
+.swiper-two > .swiper-slide > img {
+    width: 100%;
+    max-height: 112px;
+    min-height: 112px;
 }
 ul.nav.nav-pills.flex-column {
     list-style: none;
