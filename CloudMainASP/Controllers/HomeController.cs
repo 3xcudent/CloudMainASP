@@ -49,5 +49,11 @@ namespace CloudMainASP.Controllers
         {
             return View();
         }
+        [HttpGet]
+        [Route("wyswietlanie")]
+        public IActionResult wyswietlanie()
+        {
+            return View();
+        }
     }
 }

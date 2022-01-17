@@ -87,3 +87,6 @@ $('.navTrigger').click(function () {
     $('.nav-menu-mobile').toggleClass('open');
 });
 
+
+
+
