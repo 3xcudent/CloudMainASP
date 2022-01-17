@@ -600,9 +600,31 @@ footer.cm-footer {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    margin-bottom: 50px;
 }
 .add-form > .form-group {
     max-width: none !important;
+}
+p {
+    margin: auto;
+}
+.input-add-back {
+    width: 100%;
+    background: #607d8b;
+    color: white;
+    border-radius: 4px;
+    padding: 10px 30px;
+    text-align: center;
+}
+.add-new {
+    display: block;
+    padding: 10px;
+    background: #607d8b;
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+    color: white;
+    border-radius: 4px;
 }
 .cm-error {
     width: 100%;
@@ -615,6 +637,16 @@ footer.cm-footer {
 }
 .input-add-last {
     display:none;
+}
+.table {
+    font-size: 12px;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+td {
+    border: 1px solid #e1e1e1;
+    text-align: center;
 }
 img.cm-error-img {
     width: inherit;

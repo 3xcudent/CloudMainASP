@@ -1,0 +1,60 @@
+﻿@model CloudMainASP.Models.Offers
+
+
+<div class="ogloszenia-main">
+    <div class="ogloszenia-main-left">
+
+    </div>
+    <div class="ogloszenia-main-right">
+        <div class="cm-post-render">
+            @foreach (var item in Model)
+            {
+
+                <div class="cm-post-render-more">
+                    <div class="cm-post-box">
+                        <img class="cm-post-box-img" src="~/img/prom/img1.jpg" />
+                    </div>
+                    <div class="cm-post-content">
+                        <div class="cm-post-content-left">
+                            <span class="cm-post-content-left-main">
+                                @Html.DisplayNameFor(model => model.Title)
+                            </span>
+                            <span class="cm-post-content-left-main post-private">
+                                Sprzedawca: @Html.DisplayNameFor(model => model.Availability)
+                            </span>
+                            <spam class="cm-post-content-left-main">
+                                Lokalizacja: @Html.DisplayNameFor(model => model.City) @Html.DisplayNameFor(model => model.Street) @Html.DisplayNameFor(model => model.HouseNumber) @Html.DisplayNameFor(model => model.PostCode)
+                            </spam>
+                            <spam class="cm-post-content-left-main">
+                                Liczba pokoi: <b>@Html.DisplayNameFor(model => model.NumerOfRooms)</b>
+                            </spam>
+                            <spam class="cm-post-content-left-main">
+                                Liczba metrów2: <b>@Html.DisplayNameFor(model => model.FloorSpace)</b>
+                            </spam>
+                            <spam class="cm-post-content-left-main">
+                                Dodatkowe opcje:
+                            </spam>
+                            <spam class="cm-post-content-left-main ">
+                                <ol>
+                                    <li class="li-cm-post">garaż</li>
+                                    <li class="li-cm-post">ogród</li>
+                                </ol>
+                            </spam>
+                            <span class="cm-post-content-left-main post-pad">
+                                Cena: <b>@Html.DisplayNameFor(model => model.Price)zł</b>
+                            </span>
+                        </div>
+                        <div class="cm-post-content-right">
+                            <img src="~/img/icon/heart.png" />
+
+                        </div>
+                    </div>
+                </div>
+            }
+
+
+        </div>
+    </div>
+
+</div>
+

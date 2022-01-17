@@ -161,14 +161,15 @@
             </div>
             <div class="form-group">
                 <input type="submit" value="Dodaj ogłoszenie" class="input-add input-add-send" />
+                <a class="input-add-back" asp-action="Index">Wróć do listy ogłoszeń</a>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a class="input-add-back" asp-action="Index">Wróć do listy ogłoszeń</a>
-</div>
+
+    
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
