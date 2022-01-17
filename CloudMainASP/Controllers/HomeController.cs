@@ -55,5 +55,11 @@ namespace CloudMainASP.Controllers
         {
             return View();
         }
+        [HttpGet]
+        [Route("ogloszenia")]
+        public IActionResult ogloszenia()
+        {
+            return View();
+        }
     }
 }
