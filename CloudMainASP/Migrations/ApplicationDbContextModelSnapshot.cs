@@ -56,13 +56,7 @@ namespace CloudMainASP.Migrations
                     b.Property<int>("FloorSpace")
                         .HasColumnType("int");
 
-                    b.Property<string>("GeolocationIdFk")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("HouseNumber")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LastUpdate")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("Negotiable")
@@ -109,7 +103,7 @@ namespace CloudMainASP.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("IdOfferFkId")
+                    b.Property<int>("IdOfferFk")
                         .HasColumnType("int");
 
                     b.Property<string>("Name")

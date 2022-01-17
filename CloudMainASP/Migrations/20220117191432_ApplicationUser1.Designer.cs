@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CloudMainASP.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220117181423_ApplicationUser1")]
+    [Migration("20220117191432_ApplicationUser1")]
     partial class ApplicationUser1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -58,13 +58,7 @@ namespace CloudMainASP.Migrations
                     b.Property<int>("FloorSpace")
                         .HasColumnType("int");
 
-                    b.Property<string>("GeolocationIdFk")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("HouseNumber")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LastUpdate")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("Negotiable")
@@ -102,6 +96,24 @@ namespace CloudMainASP.Migrations
                     b.HasIndex("ApplicationUserId");
 
                     b.ToTable("Offers");
+                });
+
+            modelBuilder.Entity("CloudMainASP.Models.Zdjecia", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("IdOfferFk")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Zdjecia");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

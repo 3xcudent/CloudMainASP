@@ -54,7 +54,7 @@ namespace CloudMainASP.OfferEdit
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,NumerOfRooms,Title,State,TypeOfBuilding,Availability,LastUpdate,FloorSpace,Floor,DateAdded,ContactNumber,ContactEmail,Description,GeolocationIdFk,Price,Negotiable,HouseNumber,Street,PostCode,City,NumberOfFloors,DateBuilt,UserId")] Offers offers)
+        public async Task<IActionResult> Create([Bind("Id,NumerOfRooms,Title,State,TypeOfBuilding,Availability,FloorSpace,Floor,ContactNumber,ContactEmail,Description,Price,Negotiable,HouseNumber,Street,PostCode,City,NumberOfFloors,DateBuilt,UserId")] Offers offers)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace CloudMainASP.OfferEdit
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,NumerOfRooms,Title,State,TypeOfBuilding,Availability,LastUpdate,FloorSpace,Floor,DateAdded,ContactNumber,ContactEmail,Description,GeolocationIdFk,Price,Negotiable,HouseNumber,Street,PostCode,City,NumberOfFloors,DateBuilt,UserId")] Offers offers)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,NumerOfRooms,Title,State,TypeOfBuilding,Availability,FloorSpace,Floor,DateAdded,ContactNumber,ContactEmail,Description,Price,Negotiable,HouseNumber,Street,PostCode,City,NumberOfFloors,DateBuilt,UserId")] Offers offers)
         {
             if (id != offers.Id)
             {

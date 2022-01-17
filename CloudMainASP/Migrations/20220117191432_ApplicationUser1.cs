@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace CloudMainASP.Migrations
 {
-    public partial class ApplicationUser : Migration
+    public partial class ApplicationUser1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -54,6 +54,20 @@ namespace CloudMainASP.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Zdjecia",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    IdOfferFk = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Zdjecia", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -173,14 +187,12 @@ namespace CloudMainASP.Migrations
                     State = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     TypeOfBuilding = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Availability = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    LastUpdate = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     FloorSpace = table.Column<int>(type: "int", nullable: false),
                     Floor = table.Column<int>(type: "int", nullable: false),
                     DateAdded = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ContactNumber = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ContactEmail = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    GeolocationIdFk = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Price = table.Column<int>(type: "int", nullable: false),
                     Negotiable = table.Column<bool>(type: "bit", nullable: false),
                     HouseNumber = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -189,7 +201,7 @@ namespace CloudMainASP.Migrations
                     City = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     NumberOfFloors = table.Column<int>(type: "int", nullable: false),
                     DateBuilt = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UserId = table.Column<int>(type: "int", nullable: false),
+                    UserId = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ApplicationUserId = table.Column<string>(type: "nvarchar(450)", nullable: true)
                 },
                 constraints: table =>
@@ -267,6 +279,9 @@ namespace CloudMainASP.Migrations
 
             migrationBuilder.DropTable(
                 name: "Offers");
+
+            migrationBuilder.DropTable(
+                name: "Zdjecia");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");

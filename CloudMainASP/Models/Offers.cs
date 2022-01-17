@@ -12,7 +12,6 @@ namespace CloudMainASP.Models
         public string State { get; set; }
         public string TypeOfBuilding { get; set; }
         public string Availability { get; set; }
-        public string LastUpdate { get; set; }
         public int FloorSpace { get; set; }
         public int Floor { get; set; }
         [DataType(DataType.Date)]
@@ -21,7 +20,6 @@ namespace CloudMainASP.Models
         public string ContactNumber { get; set; }
         public string ContactEmail { get; set; }
         public string Description { get; set; }
-        public string GeolocationIdFk { get; set; }
         public int Price { get; set; }
         public bool Negotiable { get; set; }
         public string HouseNumber { get; set; }

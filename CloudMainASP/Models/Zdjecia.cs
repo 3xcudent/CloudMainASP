@@ -6,6 +6,6 @@ namespace CloudMainASP.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public int IdOfferFkId { get; set; }
+        public int IdOfferFk { get; set; }
     }
 }
