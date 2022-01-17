@@ -31,11 +31,14 @@
             <span class="profile-span">
                 @UserManager.GetUserAsync(User).Result.JoinDate
             </span>
+            <div class="profile-col-two">
+                <partial name="_ManageNav" />
+            </div>
 
         </div>
         <div class="profile-row-right">
             <div class="profile-col-one">
-                <partial name="_ManageNav" />
+                
             </div>
             <div class="profile-col-two">
                 @RenderBody()
